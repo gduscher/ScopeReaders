@@ -162,10 +162,15 @@ MAXDEPTH = 64
 # END constants ##
 
 class DM3Reader(sidpy.Reader):
+    """Reader for Digital Micrograph DM3 file format
+
+    Parameters
+    ----------
+    file_path: str
+        filepath to dm3 file.
+    """
     debugLevel = -1
 
-    """
-    file_path: filepath to dm3 file.
     def __init__(self, file_path, verbose=False):
         super().__init__(file_path)
 
