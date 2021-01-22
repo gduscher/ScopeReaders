@@ -200,6 +200,7 @@ class DM3Reader(sidpy.Reader):
         elif file_version == 4:
             file_size = read_64_long(self.__f)
         else:
+            file_size = 0
             is_dm = False
         # get byte-ordering
         le = read_long(self.__f)
@@ -262,6 +263,7 @@ class DM3Reader(sidpy.Reader):
         elif file_version == 4:
             file_size = read_64_long(self.__f)
         else:
+            file_size = 0
             is_dm = False
         # get byte-ordering
         le = read_long(self.__f)
