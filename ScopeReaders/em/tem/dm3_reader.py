@@ -232,12 +232,13 @@ class DM3Reader(sidpy.Reader):
     def can_read(self):
         """
         Tests whether or not the provided file has a .dm3 extension
-        Returns
+        Returns:
         -------
-
+        can_read: boolean
+            True if this has the dm3 file header
         """
-        # TODO: @gduscher to elaborate if this is not a sufficient check
-        return super(DM3Reader, self).can_read(extension='dm3')
+        can_read = (self.file_size == 0)
+        return can_read
 
     def read(self):
         """
